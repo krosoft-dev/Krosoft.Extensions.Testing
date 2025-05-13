@@ -56,7 +56,7 @@ public class ValidatorsExtensionsTests : BaseTest
 
         Check.That(errors).IsNotNull();
         Check.That(errors).HasSize(2);
-        var details = errors.ToList()!;
+        var details = errors.ToList();
 
         Check.That(details[0].TypeName).IsEqualTo("SampleEntity");
         Check.That(details[0].PropertyName).IsEqualTo("Id");

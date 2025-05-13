@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<ItemGroup>
-	  <PackageReference Include="LinqKit.Core" Version="1.2.8" />
+
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\samples\Krosoft.Extensions.Samples.Library\Krosoft.Extensions.Samples.Library.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Validations\Krosoft.Extensions.Validations.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.WebApi\Krosoft.Extensions.WebApi.csproj" />
 	</ItemGroup>
 </Project>

@@ -19,7 +19,4 @@
 		<PackageReference Include="Krosoft.Extensions.Core" Version="2025.5.5.1450" />
 		<PackageReference Include="Yarp.ReverseProxy" Version="2.3.0" />
 	</ItemGroup>
-	<ItemGroup>
-		
-	</ItemGroup>
 </Project>

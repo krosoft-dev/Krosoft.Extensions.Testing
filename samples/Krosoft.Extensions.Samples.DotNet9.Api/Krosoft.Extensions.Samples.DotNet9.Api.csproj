@@ -9,6 +9,10 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Krosoft.Extensions.Options" Version="2025.4.30.1411" />
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
+		<PackageReference Include="Krosoft.Extensions.WebApi.Blocking" Version="2025.5.13.1501" />
+		<PackageReference Include="Krosoft.Extensions.WebApi.Swagger.HealthChecks" Version="2025.5.13.1506" />
+		<PackageReference Include="Krosoft.Extensions.WebApi.Identity" Version="2025.5.13.1505" />
 		<PackageReference Include="LinqKit.Core" Version="1.2.8" />
 		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis" Version="2025.4.29.1407" />
 		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis.HealthChecks" Version="2025.4.29.1406" />
@@ -33,11 +37,6 @@
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Jobs.Hangfire\Krosoft.Extensions.Jobs.Hangfire.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Pdf\Krosoft.Extensions.Pdf.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Reporting.Csv\Krosoft.Extensions.Reporting.Csv.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.WebApi.Blocking\Krosoft.Extensions.WebApi.Blocking.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.WebApi.Identity\Krosoft.Extensions.WebApi.Identity.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.WebApi.Swagger.HealthChecks\Krosoft.Extensions.WebApi.Swagger.HealthChecks.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.WebApi.Swagger\Krosoft.Extensions.WebApi.Swagger.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.WebApi\Krosoft.Extensions.WebApi.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Zip\Krosoft.Extensions.Zip.csproj" />
 		<ProjectReference Include="..\Krosoft.Extensions.Samples.Library\Krosoft.Extensions.Samples.Library.csproj" />
 	</ItemGroup>

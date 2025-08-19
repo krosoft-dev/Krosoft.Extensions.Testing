@@ -37,7 +37,7 @@
     <PackageReference Include="AutoMapper" Version="14.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Bogus" Version="35.6.2" />
+    <PackageReference Include="Bogus" Version="35.6.3" />
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
     <PackageReference Include="Krosoft.Extensions.Core" Version="2025.5.5.1450" />

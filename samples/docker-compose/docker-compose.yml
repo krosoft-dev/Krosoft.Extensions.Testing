@@ -7,7 +7,7 @@ services:
   #     POSTGRES_PASSWORD: "positive_extensions"
 
   krosoft-extensions.redis:
-    image: redis:7.2.3-alpine3.19
+    image: redis:7.2.5-alpine3.19
     restart: on-failure
 
   krosoft-extensions.samples.dotnet6.api:

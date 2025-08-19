@@ -4,7 +4,7 @@
 		<Description>Package pour faciliter l'utilisation de Yarp.</Description>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-		<PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.0" />
+		<PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.3" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
 		<PackageReference Include="AspNetCore.HealthChecks.Uris" Version="7.0.0" />

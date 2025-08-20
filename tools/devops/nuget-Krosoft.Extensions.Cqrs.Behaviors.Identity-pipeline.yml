@@ -24,4 +24,3 @@ extends:
       - "Krosoft.Extensions.Cqrs"
       - "Krosoft.Extensions.Cqrs.Behaviors"
       - "Krosoft.Extensions.Cqrs.Behaviors.Identity"
-      - "Krosoft.Extensions.Identity.Abstractions"

@@ -21,8 +21,5 @@ extends:
   template: tools/devops/templates/pipelines/nuget-template.yml@Krosoft.Extensions
   parameters:
     packages:
-     
-     - "Krosoft.Extensions.Events"
-     - "Krosoft.Extensions.Events.Identity"
-     - "Krosoft.Extensions.Identity.Abstractions" 
-
+      - "Krosoft.Extensions.Events"
+      - "Krosoft.Extensions.Events.Identity"

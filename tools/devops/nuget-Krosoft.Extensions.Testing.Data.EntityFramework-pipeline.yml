@@ -21,9 +21,5 @@ extends:
   template: tools/devops/templates/pipelines/nuget-template.yml@Krosoft.Extensions
   parameters:
     packages:
-     
-     - "Krosoft.Extensions.Data.Abstractions"
-     - "Krosoft.Extensions.Data.EntityFramework"
-     - "Krosoft.Extensions.Testing"
-     - "Krosoft.Extensions.Testing.Data.EntityFramework"
-
+      - "Krosoft.Extensions.Testing"
+      - "Krosoft.Extensions.Testing.Data.EntityFramework"

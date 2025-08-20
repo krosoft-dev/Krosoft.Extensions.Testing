@@ -15,7 +15,7 @@ public class LanguesControllerTests : SampleBaseApiTest<Startup>
         var response = await httpClient.GetAsync("/Langues");
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-        var langues = await response.Content.ReadAsJsonAsync<IEnumerable<LangueDto>>(CancellationToken.None).ToList();
+        var langues = await response.Content.ReadAsNewtonsoftJsonAsync<IEnumerable<LangueDto>>(CancellationToken.None).ToList();
         Check.That(langues).IsNotNull();
         Check.That(langues).HasSize(2);
         Check.That(langues.Select(x => x.Code)).ContainsExactly("fr", "en");

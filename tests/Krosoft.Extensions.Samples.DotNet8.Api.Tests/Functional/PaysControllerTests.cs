@@ -15,7 +15,7 @@ public class PaysControllerTests : SampleBaseApiTest<Startup>
         var response = await httpClient.GetAsync("/Pays");
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-        var pays = await response.Content.ReadAsJsonAsync<IEnumerable<PaysDto>>(CancellationToken.None).ToList();
+        var pays = await response.Content.ReadAsNewtonsoftJsonAsync<IEnumerable<PaysDto>>(CancellationToken.None).ToList();
         Check.That(pays).IsNotNull();
         Check.That(pays).HasSize(5);
         Check.That(pays.Select(x => x.Code)).ContainsExactly("fr", "de", "it", "es", "gb");

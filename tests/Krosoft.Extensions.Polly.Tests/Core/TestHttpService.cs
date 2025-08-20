@@ -18,7 +18,7 @@ public class TestHttpService
         {
             var responseMessage = await httpClient.GetAsync(Uri, cancellationToken);
             responseMessage.EnsureSuccessStatusCode();
-            var todo = await responseMessage.Content.ReadAsJsonAsync<Todo>(cancellationToken);
+            var todo = await responseMessage.Content.ReadAsNewtonsoftJsonAsync<Todo>(cancellationToken);
 
             return todo;
         }

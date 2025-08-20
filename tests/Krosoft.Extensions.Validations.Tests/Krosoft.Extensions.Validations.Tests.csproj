@@ -2,7 +2,7 @@
 
 	<ItemGroup>
 
-		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.8.20.1702" />
 	</ItemGroup>
 
 	<ItemGroup>

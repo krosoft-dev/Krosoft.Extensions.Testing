@@ -4,18 +4,18 @@
 		<Description>Package pour faciliter la mise en place de tests pour AspNetCore.</Description>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.11" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="6.0.36" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.36" />
 		<PackageReference Include="MediatR" Version="12.1.1" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.20" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.20" />
 		<PackageReference Include="MediatR" Version="12.1.1" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.10" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.19" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.19" />
 		<PackageReference Include="MediatR" Version="12.5.0" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
@@ -25,7 +25,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MSTest.TestFramework" Version="3.8.3" />
-		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.8.20.1702" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />

@@ -11,15 +11,15 @@
 		<PackageReference Include="Krosoft.Extensions.Blocking.Memory" Version="2025.8.20.1761" />
 		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2025.8.20.1758" />
 		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework.InMemory" Version="2025.8.20.1754" />
-		<PackageReference Include="Krosoft.Extensions.Jobs.Hangfire" Version="2025.8.20.1714" />
-		<PackageReference Include="Krosoft.Extensions.Options" Version="2025.4.30.1411" />
-		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
+		<PackageReference Include="Krosoft.Extensions.Jobs.Hangfire" Version="2025.8.20.1795" />
+		<PackageReference Include="Krosoft.Extensions.Options" Version="2025.8.19.1623" />
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.8.20.1702" />
 		<PackageReference Include="Krosoft.Extensions.WebApi.Blocking" Version="2025.5.13.1501" />
-		<PackageReference Include="Krosoft.Extensions.WebApi.Swagger.HealthChecks" Version="2025.5.13.1506" />
-		<PackageReference Include="Krosoft.Extensions.WebApi.Identity" Version="2025.5.13.1505" />
+		<PackageReference Include="Krosoft.Extensions.WebApi.Swagger.HealthChecks" Version="2025.8.19.1589" />
+		<PackageReference Include="Krosoft.Extensions.WebApi.Identity" Version="2025.8.19.1628" />
 		<PackageReference Include="LinqKit.Core" Version="1.2.8" />
-		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis" Version="2025.4.29.1407" />
-		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis.HealthChecks" Version="2025.4.29.1406" />
+		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis" Version="2025.8.19.1621" />
+		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis.HealthChecks" Version="2025.8.19.1570" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
 		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="9.0.8" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.8">

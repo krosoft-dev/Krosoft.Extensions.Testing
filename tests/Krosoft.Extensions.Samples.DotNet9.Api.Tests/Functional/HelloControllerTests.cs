@@ -29,7 +29,7 @@ public class HelloControllerTests : SampleBaseApiTest<Program>
         var obj = new { Name = "World of Tests" };
 
         var httpClient = Factory.CreateClient();
-        var response = await httpClient.PostAsJsonAsync(url, obj);
+        var response = await httpClient.PostAsNewtonsoftJsonAsync(url, obj);
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
         var result = await response.Content.ReadAsStringAsync(CancellationToken.None);
@@ -43,10 +43,10 @@ public class HelloControllerTests : SampleBaseApiTest<Program>
         var obj = new { Name = (string?)null };
 
         var httpClient = Factory.CreateClient();
-        var response = await httpClient.PostAsJsonAsync(url, obj);
+        var response = await httpClient.PostAsNewtonsoftJsonAsync(url, obj);
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.BadRequest);
-        var error = await response.Content.ReadAsJsonAsync<ErrorDto>();
+        var error = await response.Content.ReadAsNewtonsoftJsonAsync<ErrorDto>();
         Check.That(error).IsNotNull();
         Check.That(error!.Code).IsEqualTo(400);
         Check.That(error.Errors)
@@ -78,7 +78,7 @@ public class HelloControllerTests : SampleBaseApiTest<Program>
         var response = await httpClient.GetAsync(url);
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.Unauthorized);
-        var errorDto = await response.Content.ReadAsJsonAsync<ErrorDto>(CancellationToken.None);
+        var errorDto = await response.Content.ReadAsNewtonsoftJsonAsync<ErrorDto>(CancellationToken.None);
         Check.That(errorDto).IsNotNull();
         Check.That(errorDto!.Code).IsEqualTo(401);
         Check.That(errorDto.Message).IsEqualTo("Unauthorized");
@@ -94,7 +94,7 @@ public class HelloControllerTests : SampleBaseApiTest<Program>
         var response = await httpClient.GetAsync(url);
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.Unauthorized);
-        var errorDto = await response.Content.ReadAsJsonAsync<ErrorDto>(CancellationToken.None);
+        var errorDto = await response.Content.ReadAsNewtonsoftJsonAsync<ErrorDto>(CancellationToken.None);
         Check.That(errorDto).IsNotNull();
         Check.That(errorDto!.Code).IsEqualTo(401);
         Check.That(errorDto.Message).IsEqualTo("Unauthorized");

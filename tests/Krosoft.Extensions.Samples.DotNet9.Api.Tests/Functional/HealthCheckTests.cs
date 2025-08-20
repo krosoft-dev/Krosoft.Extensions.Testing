@@ -16,7 +16,7 @@ public class HealthCheckTests : SampleBaseApiTest<Program>
         var client = Factory.CreateClient();
         var response = await client.GetAsync("/Health/Check");
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-        var healthCheckStatus = await response.Content.ReadAsJsonAsync<HealthCheckStatusDto>(CancellationToken.None);
+        var healthCheckStatus = await response.Content.ReadAsNewtonsoftJsonAsync<HealthCheckStatusDto>(CancellationToken.None);
 
         Check.That(healthCheckStatus).IsNotNull();
         Check.That(healthCheckStatus!.Status).IsEqualTo("Healthy");
@@ -37,7 +37,7 @@ public class HealthCheckTests : SampleBaseApiTest<Program>
         var client = Factory.CreateClient();
         var response = await client.GetAsync("/Health/Liveness");
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-        var model = await response.Content.ReadAsJsonAsync<UIHealthReport>(CancellationToken.None);
+        var model = await response.Content.ReadAsNewtonsoftJsonAsync<UIHealthReport>(CancellationToken.None);
 
         Check.That(model).IsNotNull();
         Check.That(model!.Status).IsEqualTo(UIHealthStatus.Healthy);
@@ -57,7 +57,7 @@ public class HealthCheckTests : SampleBaseApiTest<Program>
         var client = Factory.CreateClient();
         var response = await client.GetAsync("/Health/Readiness");
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-        var model = await response.Content.ReadAsJsonAsync<UIHealthReport>(CancellationToken.None);
+        var model = await response.Content.ReadAsNewtonsoftJsonAsync<UIHealthReport>(CancellationToken.None);
 
         Check.That(model).IsNotNull();
         Check.That(model!.Status).IsEqualTo(UIHealthStatus.Healthy);

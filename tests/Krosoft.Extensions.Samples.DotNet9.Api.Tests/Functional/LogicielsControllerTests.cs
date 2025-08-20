@@ -45,7 +45,7 @@ public class LogicielsControllerTests : SampleBaseApiTest<Program>
         var response = await httpClient.GetAsync("/Logiciels");
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-        var result = await response.Content.ReadAsJsonAsync<PaginationResult<LogicielDto>>(CancellationToken.None);
+        var result = await response.Content.ReadAsNewtonsoftJsonAsync<PaginationResult<LogicielDto>>(CancellationToken.None);
         Check.That(result).IsNotNull();
         Check.That(result?.Items).HasSize(5);
         Check.That(result?.Items.Select(x => x.Id.ToString()))
@@ -65,7 +65,7 @@ public class LogicielsControllerTests : SampleBaseApiTest<Program>
         var response = await httpClient.GetAsync($"/Logiciels?Nom={nom}");
 
         Check.That(response.StatusCode).IsEqualTo(HttpStatusCode.OK);
-        var result = await response.Content.ReadAsJsonAsync<PaginationResult<LogicielDto>>(CancellationToken.None);
+        var result = await response.Content.ReadAsNewtonsoftJsonAsync<PaginationResult<LogicielDto>>(CancellationToken.None);
         Check.That(result).IsNotNull();
         Check.That(result?.Items).HasSize(5);
         Check.That(result?.Items.Select(x => x.Id.ToString()))

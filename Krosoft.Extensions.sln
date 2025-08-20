@@ -103,8 +103,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Blocking
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Blocking.Tests", "tests\Krosoft.Extensions.Blocking.Tests\Krosoft.Extensions.Blocking.Tests.csproj", "{EE1F62FA-B241-494C-A68A-A8B1D0B09EFB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Jobs", "src\Krosoft.Extensions.Jobs\Krosoft.Extensions.Jobs.csproj", "{A103AE75-41BC-4CBB-98F4-C1CB6723F454}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Cqrs.Behaviors", "src\Krosoft.Extensions.Cqrs.Behaviors\Krosoft.Extensions.Cqrs.Behaviors.csproj", "{8228898F-4E4E-4E57-8D67-F45321D4A9B4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Cqrs.Behaviors.Identity", "src\Krosoft.Extensions.Cqrs.Behaviors.Identity\Krosoft.Extensions.Cqrs.Behaviors.Identity.csproj", "{11346FE6-723B-4C68-8FD0-8A63A45C4F88}"
@@ -115,7 +113,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Events",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Events.Identity", "src\Krosoft.Extensions.Events.Identity\Krosoft.Extensions.Events.Identity.csproj", "{397E2A78-1B08-4B07-9F4C-21CEEF4C9C07}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "16.Jobs", "16.Jobs", "{FB255A45-0B9C-40AA-81FA-242244DCF7E9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "16.Events", "16.Events", "{FB255A45-0B9C-40AA-81FA-242244DCF7E9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krosoft.Extensions.Polly.Tests", "tests\Krosoft.Extensions.Polly.Tests\Krosoft.Extensions.Polly.Tests.csproj", "{492B2F95-FC2D-4AC3-9AE7-DA62C6C60648}"
 EndProject
@@ -130,8 +128,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krosoft.Extensions.Samples.DotNet9.Api", "samples\Krosoft.Extensions.Samples.DotNet9.Api\Krosoft.Extensions.Samples.DotNet9.Api.csproj", "{366D9B20-A734-4540-BE2A-6693158BDE27}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krosoft.Extensions.Samples.DotNet9.Api.Tests", "tests\Krosoft.Extensions.Samples.DotNet9.Api.Tests\Krosoft.Extensions.Samples.DotNet9.Api.Tests.csproj", "{CEE142F4-AE9E-495A-BF61-E0114C64016C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krosoft.Extensions.Jobs.Hangfire", "src\Krosoft.Extensions.Jobs.Hangfire\Krosoft.Extensions.Jobs.Hangfire.csproj", "{5E824E23-E226-4A0B-CC88-1B431D7E41AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -801,22 +797,6 @@ Global
 		{EE1F62FA-B241-494C-A68A-A8B1D0B09EFB}.Release|x64.Build.0 = Release|Any CPU
 		{EE1F62FA-B241-494C-A68A-A8B1D0B09EFB}.Release|x86.ActiveCfg = Release|Any CPU
 		{EE1F62FA-B241-494C-A68A-A8B1D0B09EFB}.Release|x86.Build.0 = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|ARM.Build.0 = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|x64.Build.0 = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Debug|x86.Build.0 = Debug|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|ARM.ActiveCfg = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|ARM.Build.0 = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|x64.ActiveCfg = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|x64.Build.0 = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|x86.ActiveCfg = Release|Any CPU
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454}.Release|x86.Build.0 = Release|Any CPU
 		{8228898F-4E4E-4E57-8D67-F45321D4A9B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8228898F-4E4E-4E57-8D67-F45321D4A9B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8228898F-4E4E-4E57-8D67-F45321D4A9B4}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -1009,22 +989,6 @@ Global
 		{CEE142F4-AE9E-495A-BF61-E0114C64016C}.Release|x64.Build.0 = Release|Any CPU
 		{CEE142F4-AE9E-495A-BF61-E0114C64016C}.Release|x86.ActiveCfg = Release|Any CPU
 		{CEE142F4-AE9E-495A-BF61-E0114C64016C}.Release|x86.Build.0 = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|ARM.Build.0 = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|x64.Build.0 = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Debug|x86.Build.0 = Debug|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|ARM.ActiveCfg = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|ARM.Build.0 = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|x64.ActiveCfg = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|x64.Build.0 = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|x86.ActiveCfg = Release|Any CPU
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1069,7 +1033,6 @@ Global
 		{966830B6-16D3-43D3-8CF4-1EC2FD146976} = {429B276C-8225-408D-A811-70FBCD8DDF80}
 		{40FF43BE-5285-4557-9146-1E18067105AC} = {429B276C-8225-408D-A811-70FBCD8DDF80}
 		{EE1F62FA-B241-494C-A68A-A8B1D0B09EFB} = {429B276C-8225-408D-A811-70FBCD8DDF80}
-		{A103AE75-41BC-4CBB-98F4-C1CB6723F454} = {FB255A45-0B9C-40AA-81FA-242244DCF7E9}
 		{8228898F-4E4E-4E57-8D67-F45321D4A9B4} = {699E6411-C1FC-49BC-8853-66CDCB0B863A}
 		{11346FE6-723B-4C68-8FD0-8A63A45C4F88} = {699E6411-C1FC-49BC-8853-66CDCB0B863A}
 		{3F256B36-B613-4BEE-B20B-7A602A4FB5A0} = {699E6411-C1FC-49BC-8853-66CDCB0B863A}
@@ -1077,7 +1040,6 @@ Global
 		{397E2A78-1B08-4B07-9F4C-21CEEF4C9C07} = {FB255A45-0B9C-40AA-81FA-242244DCF7E9}
 		{366D9B20-A734-4540-BE2A-6693158BDE27} = {1BA9DB0A-8961-4AA1-BB81-F8C2820FCB52}
 		{CEE142F4-AE9E-495A-BF61-E0114C64016C} = {1BA9DB0A-8961-4AA1-BB81-F8C2820FCB52}
-		{5E824E23-E226-4A0B-CC88-1B431D7E41AA} = {FB255A45-0B9C-40AA-81FA-242244DCF7E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7FD07ECB-B4B5-4D65-8E03-10F0C97C77A9}

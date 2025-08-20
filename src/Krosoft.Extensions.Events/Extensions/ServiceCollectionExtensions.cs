@@ -8,10 +8,6 @@ namespace Krosoft.Extensions.Events.Extensions;
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddEvents(this IServiceCollection services)
-    {
-        services.AddFireForget();
-        services.AddTransient<IEventService, EventService>();
-
-        return services;
-    }
+        => services.AddFireForget()
+                   .AddTransient<IEventService, EventService>();
 }

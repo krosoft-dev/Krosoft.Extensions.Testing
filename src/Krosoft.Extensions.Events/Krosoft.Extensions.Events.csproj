@@ -16,10 +16,13 @@
 		<PackageReference Include="MediatR" Version="12.5.0" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
 		<PackageReference Include="MediatR" Version="12.5.0" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Krosoft.Extensions.Jobs\Krosoft.Extensions.Jobs.csproj" />
+		
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Krosoft.Extensions.Jobs" Version="2025.8.19.1604" />
 	</ItemGroup>
 </Project>

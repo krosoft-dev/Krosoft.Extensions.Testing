@@ -8,6 +8,7 @@
 		<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="Krosoft.Extensions.Jobs.Hangfire" Version="2025.8.20.1714" />
 		<PackageReference Include="Krosoft.Extensions.Options" Version="2025.4.30.1411" />
 		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
 		<PackageReference Include="Krosoft.Extensions.WebApi.Blocking" Version="2025.5.13.1501" />
@@ -17,8 +18,8 @@
 		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis" Version="2025.4.29.1407" />
 		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis.HealthChecks" Version="2025.4.29.1406" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="9.0.4" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.4">
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="9.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.8">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -34,7 +35,6 @@
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs.Behaviors\Krosoft.Extensions.Cqrs.Behaviors.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs\Krosoft.Extensions.Cqrs.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Identity\Krosoft.Extensions.Identity.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Jobs.Hangfire\Krosoft.Extensions.Jobs.Hangfire.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Pdf\Krosoft.Extensions.Pdf.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Reporting.Csv\Krosoft.Extensions.Reporting.Csv.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Zip\Krosoft.Extensions.Zip.csproj" />

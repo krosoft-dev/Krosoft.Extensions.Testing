@@ -24,6 +24,5 @@ extends:
      
      - "Krosoft.Extensions.Events"
      - "Krosoft.Extensions.Events.Identity"
-     - "Krosoft.Extensions.Identity.Abstractions"
-     - "Krosoft.Extensions.Jobs"
+     - "Krosoft.Extensions.Identity.Abstractions" 
 

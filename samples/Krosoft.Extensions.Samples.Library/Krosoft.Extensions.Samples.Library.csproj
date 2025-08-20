@@ -41,12 +41,12 @@
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
     <PackageReference Include="Krosoft.Extensions.Core" Version="2025.5.5.1450" />
+    <PackageReference Include="Krosoft.Extensions.Data.Abstractions" Version="2025.8.20.1758" />
     <PackageReference Include="Krosoft.Extensions.Mapping" Version="2025.5.6.1457" />
     <PackageReference Include="LinqKit.Core" Version="1.2.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs\Krosoft.Extensions.Cqrs.csproj" />
-    <ProjectReference Include="..\..\src\Krosoft.Extensions.Data.Abstractions\Krosoft.Extensions.Data.Abstractions.csproj" />
   </ItemGroup>
 </Project>

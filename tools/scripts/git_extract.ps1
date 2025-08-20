@@ -2,7 +2,7 @@
 
 # Configuration
 $organizationName = "krosoft-dev"
-$projectName = "Krosoft.Extensions.Data"
+$projectName = "Krosoft.Extensions.Blocking"
 $commitMessage = "Extraction du projet $projectName depuis Krosoft.Extensions"
 $targetBranch = "main"  
 $SourceBranch = "main"
@@ -34,36 +34,23 @@ $pathsToKeep = @(
     "tools\scripts\git_pull.ps1",
 
     # Fichiers sources   
-    "src\Krosoft.Extensions.Data.Abstractions", 
-    "src\Krosoft.Extensions.Data.Json",  
-    "src\Krosoft.Extensions.Data.EntityFramework", 
-    "src\Krosoft.Extensions.Data.EntityFramework.InMemory",
-    "src\Krosoft.Extensions.Data.EntityFramework.Sqlite", 
-    "src\Krosoft.Extensions.Data.EntityFramework.PostgreSql",
-    "src\Krosoft.Extensions.Data.EntityFramework.SqlServer", 
-
-    # Fichiers sources       
-    "tests\Krosoft.Extensions.Data.EntityFramework.InMemory.Tests",
-    "tests\Krosoft.Extensions.Data.EntityFramework.Tests",
-    "tests\Krosoft.Extensions.Data.Json.Tests",
-    "tests\Krosoft.Extensions.Data.Abstractions.Tests",  
+    "src\Krosoft.Extensions.Blocking", 
+    "src\Krosoft.Extensions.Blocking.Abstractions", 
+    "src\Krosoft.Extensions.Blocking.Memory", 
+    "src\Krosoft.Extensions.Blocking.Redis",  
+       
+    # Fichiers tests        
+    "tests\Krosoft.Extensions.Blocking.Tests",
+    "tests\Krosoft.Extensions.Blocking.Memory.Tests",  
 
     # Fichiers devops
     "tools\devops\vars\vars.yml",
     "tools\devops\build-pipeline.yml",        
-    "tools\devops\nuget-Krosoft.Extensions.Data.Abstractions-pipeline.yml"
-
-
-    "tools\devops\nuget-Krosoft.Extensions.Data.Json-pipeline.yml",
-    "tools\devops\nuget-Krosoft.Extensions.Data.EntityFramework-pipeline.yml",
-    "tools\devops\nuget-Krosoft.Extensions.Data.EntityFramework.InMemory-pipeline.yml",
-    "tools\devops\nuget-Krosoft.Extensions.Data.EntityFramework.Sqlite-pipeline.yml",
-    "tools\devops\nuget-Krosoft.Extensions.Data.EntityFramework.PostgreSql-pipeline.yml",
-    "tools\devops\nuget-Krosoft.Extensions.Data.EntityFramework.SqlServer-pipeline.yml"
-
-
-
-
+    "tools\devops\nuget-Krosoft.Extensions.Blocking-pipeline.yml",
+    "tools\devops\nuget-Krosoft.Extensions.Blocking.Abstractions-pipeline.yml", 
+    "tools\devops\nuget-Krosoft.Extensions.Blocking.Memory-pipeline.yml", 
+    "tools\devops\nuget-Krosoft.Extensions.Blocking.Redis-pipeline.yml"
+    
 ) 
 
 

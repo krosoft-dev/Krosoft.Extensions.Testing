@@ -8,6 +8,9 @@
 		<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="Krosoft.Extensions.Blocking.Memory" Version="2025.8.20.1761" />
+		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2025.8.20.1758" />
+		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework.InMemory" Version="2025.8.20.1754" />
 		<PackageReference Include="LinqKit.Core" Version="1.2.8" />
 		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.5.13.1505" />
 		<PackageReference Include="Krosoft.Extensions.WebApi.Blocking" Version="2025.5.13.1501" />
@@ -22,16 +25,10 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Blocking.Memory\Krosoft.Extensions.Blocking.Memory.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Blocking\Krosoft.Extensions.Blocking.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Data.EntityFramework.Sqlite\Krosoft.Extensions.Data.EntityFramework.Sqlite.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Data.EntityFramework.InMemory\Krosoft.Extensions.Data.EntityFramework.InMemory.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Data.EntityFramework\Krosoft.Extensions.Data.EntityFramework.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs.Behaviors.Identity\Krosoft.Extensions.Cqrs.Behaviors.Identity.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs.Behaviors.Validations\Krosoft.Extensions.Cqrs.Behaviors.Validations.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs.Behaviors\Krosoft.Extensions.Cqrs.Behaviors.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs\Krosoft.Extensions.Cqrs.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Identity\Krosoft.Extensions.Identity.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Pdf\Krosoft.Extensions.Pdf.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Reporting.Csv\Krosoft.Extensions.Reporting.Csv.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Zip\Krosoft.Extensions.Zip.csproj" />

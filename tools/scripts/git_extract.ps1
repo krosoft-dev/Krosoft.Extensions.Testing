@@ -2,7 +2,7 @@
 
 # Configuration
 $organizationName = "krosoft-dev"
-$projectName = "Krosoft.Extensions.Blocking"
+$projectName = "Krosoft.Extensions.Cqrs"
 $commitMessage = "Extraction du projet $projectName depuis Krosoft.Extensions"
 $targetBranch = "main"  
 $SourceBranch = "main"
@@ -34,22 +34,21 @@ $pathsToKeep = @(
     "tools\scripts\git_pull.ps1",
 
     # Fichiers sources   
-    "src\Krosoft.Extensions.Blocking", 
-    "src\Krosoft.Extensions.Blocking.Abstractions", 
-    "src\Krosoft.Extensions.Blocking.Memory", 
-    "src\Krosoft.Extensions.Blocking.Redis",  
+    "src\Krosoft.Extensions.Cqrs", 
+    "src\Krosoft.Extensions.Cqrs.Behaviors", 
+    "src\Krosoft.Extensions.Cqrs.Behaviors.Identity", 
+    "src\Krosoft.Extensions.Cqrs.Behaviors.Validations",  
        
     # Fichiers tests        
-    "tests\Krosoft.Extensions.Blocking.Tests",
-    "tests\Krosoft.Extensions.Blocking.Memory.Tests",  
+    # "tests\Krosoft.Extensions.Cqrs.Tests", 
 
     # Fichiers devops
     "tools\devops\vars\vars.yml",
     "tools\devops\build-pipeline.yml",        
-    "tools\devops\nuget-Krosoft.Extensions.Blocking-pipeline.yml",
-    "tools\devops\nuget-Krosoft.Extensions.Blocking.Abstractions-pipeline.yml", 
-    "tools\devops\nuget-Krosoft.Extensions.Blocking.Memory-pipeline.yml", 
-    "tools\devops\nuget-Krosoft.Extensions.Blocking.Redis-pipeline.yml"
+    "tools\devops\nuget-Krosoft.Extensions.Cqrs-pipeline.yml",
+    "tools\devops\nuget-Krosoft.Extensions.Cqrs.Behaviors-pipeline.yml", 
+    "tools\devops\nuget-Krosoft.Extensions.Cqrs.Behaviors.Identity-pipeline.yml", 
+    "tools\devops\nuget-Krosoft.Extensions.Cqrs.Behaviors.Validations-pipeline.yml"
     
 ) 
 

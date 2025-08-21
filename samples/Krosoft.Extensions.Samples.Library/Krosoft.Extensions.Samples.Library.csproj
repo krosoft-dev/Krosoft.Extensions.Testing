@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bogus" Version="35.6.3" />
+    <PackageReference Include="Krosoft.Extensions.Cqrs" Version="2025.8.20.1891" />
     <PackageReference Include="FluentValidation" Version="11.11.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
     <PackageReference Include="Krosoft.Extensions.Core" Version="2025.8.19.1582" />
@@ -46,7 +47,5 @@
     <PackageReference Include="LinqKit.Core" Version="1.2.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs\Krosoft.Extensions.Cqrs.csproj" />
-  </ItemGroup>
+  
 </Project>

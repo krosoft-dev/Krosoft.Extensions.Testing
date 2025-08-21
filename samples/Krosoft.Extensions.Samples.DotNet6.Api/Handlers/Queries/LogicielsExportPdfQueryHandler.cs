@@ -3,6 +3,7 @@ using Krosoft.Extensions.Core.Models;
 using Krosoft.Extensions.Pdf.Interfaces;
 using Krosoft.Extensions.Samples.Library.Factories;
 using Krosoft.Extensions.Samples.Library.Models.Queries;
+using MediatR;
 
 namespace Krosoft.Extensions.Samples.DotNet6.Api.Handlers.Queries;
 

@@ -5,6 +5,7 @@ using Krosoft.Extensions.Data.EntityFramework.Extensions;
 using Krosoft.Extensions.Samples.Library.Models.Dto;
 using Krosoft.Extensions.Samples.Library.Models.Entities;
 using Krosoft.Extensions.Samples.Library.Models.Queries;
+using MediatR;
 
 namespace Krosoft.Extensions.Samples.DotNet6.Api.Handlers.Queries;
 

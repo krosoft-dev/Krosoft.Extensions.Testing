@@ -111,16 +111,7 @@ AzDevOpsInitCli $global:url $global:projet
 AzDevOpsPipelinesList
 AzDevOpsPipelinesInitQueueId
 AzDevOpsPipelinesInitServiceConnectionId 
- 
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Blocking"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Blocking.Abstractions"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Blocking.Memory"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Blocking.Redis"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Core"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Cqrs"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Cqrs.Behaviors"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Cqrs.Behaviors.Identity"
-AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Cqrs.Behaviors.Validations"
+  
 AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Data.Abstractions"
 AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Data.EntityFramework"
 AzDevOpsPipelinesCreateOrUpdate "Krosoft.Extensions.Data.EntityFramework.InMemory"

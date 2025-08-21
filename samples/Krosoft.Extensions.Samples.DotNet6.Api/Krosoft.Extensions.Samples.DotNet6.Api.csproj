@@ -11,6 +11,9 @@
 		<PackageReference Include="Krosoft.Extensions.Blocking.Memory" Version="2025.8.20.1761" />
 		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis" Version="2025.8.19.1621" />
 		<PackageReference Include="Krosoft.Extensions.Cache.Distributed.Redis.HealthChecks" Version="2025.8.19.1570" />
+		<PackageReference Include="Krosoft.Extensions.Cqrs.Behaviors" Version="2025.8.20.1900" />
+		<PackageReference Include="Krosoft.Extensions.Cqrs.Behaviors.Identity" Version="2025.5.13.1514" />
+		<PackageReference Include="Krosoft.Extensions.Cqrs.Behaviors.Validations" Version="2025.8.20.1900" />
 		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2025.8.20.1758" />
 		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework.InMemory" Version="2025.8.20.1754" />
 		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.8.20.1702" />
@@ -25,11 +28,7 @@
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs.Behaviors.Identity\Krosoft.Extensions.Cqrs.Behaviors.Identity.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs.Behaviors.Validations\Krosoft.Extensions.Cqrs.Behaviors.Validations.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs.Behaviors\Krosoft.Extensions.Cqrs.Behaviors.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Cqrs\Krosoft.Extensions.Cqrs.csproj" />
-		<ProjectReference Include="..\..\src\Krosoft.Extensions.Pdf\Krosoft.Extensions.Pdf.csproj" />
+	 <ProjectReference Include="..\..\src\Krosoft.Extensions.Pdf\Krosoft.Extensions.Pdf.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Reporting.Csv\Krosoft.Extensions.Reporting.Csv.csproj" />
 		<ProjectReference Include="..\..\src\Krosoft.Extensions.Zip\Krosoft.Extensions.Zip.csproj" />
 		<ProjectReference Include="..\Krosoft.Extensions.Samples.Library\Krosoft.Extensions.Samples.Library.csproj" />

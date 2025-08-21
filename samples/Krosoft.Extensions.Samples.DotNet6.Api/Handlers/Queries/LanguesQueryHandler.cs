@@ -4,6 +4,7 @@ using Krosoft.Extensions.Data.Abstractions.Interfaces;
 using Krosoft.Extensions.Samples.Library.Models.Dto;
 using Krosoft.Extensions.Samples.Library.Models.Entities;
 using Krosoft.Extensions.Samples.Library.Models.Queries;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace Krosoft.Extensions.Samples.DotNet6.Api.Handlers.Queries;

@@ -1,4 +1,5 @@
 ﻿using Krosoft.Extensions.Samples.Library.Models.Queries;
+using MediatR;
 
 namespace Krosoft.Extensions.Samples.DotNet6.Api.Handlers.Queries;
 

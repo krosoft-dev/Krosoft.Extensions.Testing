@@ -21,8 +21,7 @@ extends:
   template: tools/devops/templates/pipelines/nuget-template.yml@Krosoft.Extensions
   parameters:
     packages:
-     
-     - "Krosoft.Extensions.Cqrs"
+      
      - "Krosoft.Extensions.Testing"
      - "Krosoft.Extensions.Testing.Cqrs"
 

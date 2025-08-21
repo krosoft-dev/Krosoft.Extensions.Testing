@@ -15,8 +15,7 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
 		<PackageReference Include="MediatR" Version="12.5.0" />
 	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Krosoft.Extensions.Cqrs\Krosoft.Extensions.Cqrs.csproj" />
-		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />
+	<ItemGroup><PackageReference Include="Krosoft.Extensions.Cqrs" Version="2025.8.20.1891" />
+		 	<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />
 	</ItemGroup>
 </Project>

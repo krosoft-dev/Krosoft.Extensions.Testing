@@ -21,12 +21,10 @@ public static class ServiceCollectionExtensions
                                                     Func<ServiceDescriptor, bool> filter)
     {
         var servicesDescriptor = services.Where(filter).ToList();
-        if (servicesDescriptor.Any())
+
+        foreach (var serviceDescriptor in servicesDescriptor)
         {
-            foreach (var serviceDescriptor in servicesDescriptor)
-            {
-                services.Remove(serviceDescriptor);
-            }
+            services.Remove(serviceDescriptor);
         }
 
         return services;

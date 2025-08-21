@@ -24,7 +24,7 @@
 		<PackageReference Include="MediatR" Version="12.5.0" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="MSTest.TestFramework" Version="3.8.3" />
+		<PackageReference Include="MSTest.TestFramework" Version="3.10.2" />
 		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2025.8.20.1702" />
 	</ItemGroup>
 	<ItemGroup>

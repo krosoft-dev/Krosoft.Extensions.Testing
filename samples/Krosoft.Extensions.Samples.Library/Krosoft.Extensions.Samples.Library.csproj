@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Factories\**" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Factories\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Factories\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factories\UtilisateurFactory.cs" />
+    <Compile Include="Models\IFoo.cs" />
+    <Compile Include="Models\UtilisateurBasique.cs" />
+  </ItemGroup>
+   
+  
+</Project>

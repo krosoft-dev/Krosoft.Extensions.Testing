@@ -38,6 +38,6 @@
 	<ItemGroup>
 		<PackageReference Include="Krosoft.Extensions.Core" Version="2025.8.19.1582" />
 		<PackageReference Include="Moq" Version="4.20.72" />
-		<PackageReference Include="NFluent" Version="3.0.4" />
+		<PackageReference Include="NFluent" Version="3.1.0" />
 	</ItemGroup>
 </Project>

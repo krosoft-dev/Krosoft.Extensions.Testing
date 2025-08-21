@@ -1,6 +1,0 @@
-﻿@Krosoft.Extensions.Samples.DotNet6.Api_HostAddress = http://localhost:6008 
-
-GET {{Krosoft.Extensions.Samples.DotNet6.Api_HostAddress}}/hello
-
-###
-

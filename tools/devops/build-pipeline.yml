@@ -1,4 +1,4 @@
-name: Build 'Krosoft.Extensions' - $(Date:yyyy.MM.dd).$(BuildID)
+name: Build 'Krosoft.Extensions.Testing' - $(Date:yyyy.MM.dd).$(BuildID)
 
 trigger:
   - main
@@ -30,3 +30,4 @@ stages:
       sonarCloudProjectName: ${{ variables.sonarCloudProjectName }}
       runUnitTests: true
       runSonarCloudAnalyze: true
+

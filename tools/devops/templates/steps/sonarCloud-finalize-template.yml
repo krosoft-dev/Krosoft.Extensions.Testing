@@ -1,8 +1,0 @@
-steps:
-  - task: SonarCloudAnalyze@2
-    displayName: "Analyze SonarCloud"
-
-  - task: SonarCloudPublish@2
-    displayName: "Publish SonarCloud"
-    inputs:
-      pollingTimeoutSec: "300"

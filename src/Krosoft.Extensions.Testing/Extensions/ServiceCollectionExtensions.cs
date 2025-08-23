@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Moq;
 
 namespace Krosoft.Extensions.Testing.Extensions;
 
@@ -61,5 +63,11 @@ public static class ServiceCollectionExtensions
         services.RemoveTransient<TService>();
         services.AddSingleton<TService, TImplementation>();
         return services;
+    }
+
+    public static IServiceCollection MockLogger<TService>(this IServiceCollection services)
+        where TService : class
+    {
+        return services.SwapTransient(_ => new Mock<ILogger<TService>>().Object);
     }
 }

@@ -6,12 +6,10 @@ public static class KrosoftTokenHelper
 {
     public static KrosoftToken Defaut => new KrosoftToken
     {
-        Id = "Claim_Id",
-        TenantId = "Claim_TenantId",
-        Nom = "Claim_Nom",
+        Id = "Claim_Id", 
+        Name = "Claim_Name",
         Email = "Claim_Email",
-        RoleId = "Claim_RoleId",
-        RoleHomePage = "Claim_RoleHomePage",
+        RoleId = "Claim_RoleId", 
         LangueId = "Claim_LangueId",
         LangueCode = "Claim_LangueCode"
     };

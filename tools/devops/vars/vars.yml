@@ -4,7 +4,7 @@ variables:
   vmImage: "ubuntu-22.04"
 
   # .net
-  dotNetVersion: "9.0.x"
+  dotNetVersion: "10.0.x"
   buildConfiguration: "Release"
   buildPlatform: "AnyCPU"
   buildProjects: "**/*.csproj"

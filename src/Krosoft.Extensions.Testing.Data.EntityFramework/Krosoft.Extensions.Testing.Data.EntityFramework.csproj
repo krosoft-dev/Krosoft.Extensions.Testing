@@ -19,8 +19,8 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.11" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Data.Abstractions" Version="2025.11.20.4505" />
-		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2025.11.20.4505" />
+		<PackageReference Include="Krosoft.Extensions.Data.Abstractions" Version="2025.12.4.4618" />
+		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2025.12.4.4618" />
 		<PackageReference Include="LinqKit.Core" Version="1.2.9" />
 	</ItemGroup>
 	<ItemGroup>

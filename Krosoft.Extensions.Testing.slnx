@@ -1,0 +1,20 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/samples/">
+    <Project Path="samples/Krosoft.Extensions.Samples.Library/Krosoft.Extensions.Samples.Library.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Krosoft.Extensions.Testing.Cqrs/Krosoft.Extensions.Testing.Cqrs.csproj" />
+    <Project Path="src/Krosoft.Extensions.Testing.Data.EntityFramework/Krosoft.Extensions.Testing.Data.EntityFramework.csproj" />
+    <Project Path="src/Krosoft.Extensions.Testing.WebApi/Krosoft.Extensions.Testing.WebApi.csproj" />
+    <Project Path="src/Krosoft.Extensions.Testing/Krosoft.Extensions.Testing.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Krosoft.Extensions.Testing.Tests/Krosoft.Extensions.Testing.Tests.csproj" />
+  </Folder>
+</Solution>

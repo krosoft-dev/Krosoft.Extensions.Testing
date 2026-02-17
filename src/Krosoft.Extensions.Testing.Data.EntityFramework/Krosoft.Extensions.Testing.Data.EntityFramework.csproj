@@ -21,7 +21,7 @@
 	<ItemGroup>
 		<PackageReference Include="Krosoft.Extensions.Data.Abstractions" Version="2026.1.16.5099" />
 		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2026.1.16.5099" />
-		<PackageReference Include="LinqKit.Core" Version="1.2.10" />
+		<PackageReference Include="LinqKit.Core" Version="1.2.11" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />

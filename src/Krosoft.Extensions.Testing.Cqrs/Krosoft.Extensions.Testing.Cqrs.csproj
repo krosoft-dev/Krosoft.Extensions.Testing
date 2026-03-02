@@ -19,7 +19,7 @@
 		<PackageReference Include="MediatR" Version="12.5.0" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Cqrs" Version="2026.2.17.5625" />
+		<PackageReference Include="Krosoft.Extensions.Cqrs" Version="2026.2.27.5728" />
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />
 	</ItemGroup>
 </Project>

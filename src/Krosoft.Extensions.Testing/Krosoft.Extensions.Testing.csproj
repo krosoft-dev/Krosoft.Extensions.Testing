@@ -44,7 +44,7 @@
 		<PackageReference Include="System.Text.Json" Version="9.0.14" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Core" Version="2026.2.17.5688" />
+		<PackageReference Include="Krosoft.Extensions.Core" Version="2026.3.17.6046" />
 		<PackageReference Include="Moq" Version="4.20.72" />
 		<PackageReference Include="NFluent" Version="3.1.0" />
 	</ItemGroup>

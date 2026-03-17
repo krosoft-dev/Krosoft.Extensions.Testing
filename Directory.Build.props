@@ -12,4 +12,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <LangVersion>default</LangVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <!--  GHSA-rvv3-g6hj-g44x : AutoMapper Vulnerable to Denial of Service (DoS) -->
+    <NuGetAuditSuppress Include="https://github.com/advisories/GHSA-rvv3-g6hj-g44x" />
+  </ItemGroup>
 </Project>

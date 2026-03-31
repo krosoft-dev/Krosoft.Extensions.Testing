@@ -1,24 +1,23 @@
-﻿using System.Net;
+using System.Net;
 using Krosoft.Extensions.Core.Models;
 using Krosoft.Extensions.Testing.Extensions;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using Moq.Protected;
 
-//using Krosoft.Extensions.Cache.Distributed.Redis.Interfaces;
-//using Krosoft.Extensions.Core.Models.Business;
-//using Krosoft.Extensions.Data.EntityFramework.Contexts;
-//using Krosoft.Extensions.Testing.Extensions;
-
 namespace Krosoft.Extensions.Testing.WebApi;
 
 public abstract class BaseApiTest<TStartup, TKrosoftContext> : BaseTest
     where TStartup : class
-//where TKrosoftContext : KrosoftContext
 {
     protected CustomWebApplicationFactory<TStartup, TKrosoftContext> Factory = null!;
     protected virtual bool UseFakeAuth => true;
+
+    protected virtual void ConfigureAppConfiguration(IConfigurationBuilder configurationBuilder)
+    {
+    }
 
     protected virtual void ConfigureClaims(KrosoftToken krosoftToken)
     {
@@ -34,7 +33,6 @@ public abstract class BaseApiTest<TStartup, TKrosoftContext> : BaseTest
         {
             ConfigureServices(services);
 
-            //Mock pour HttpClient.
             var mockHttpMessageHandler = new Mock<HttpMessageHandler>();
             mockHttpMessageHandler.Protected()
                                   .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
@@ -50,7 +48,7 @@ public abstract class BaseApiTest<TStartup, TKrosoftContext> : BaseTest
             services.SwapTransient(_ => mockHttpClientFactory.Object);
         }
 
-        return new CustomWebApplicationFactory<TStartup, TKrosoftContext>(Action, null, UseFakeAuth);
+        return new CustomWebApplicationFactory<TStartup, TKrosoftContext>(Action, ConfigureAppConfiguration, null, UseFakeAuth);
     }
 
     [TestCleanup]
@@ -62,6 +60,6 @@ public abstract class BaseApiTest<TStartup, TKrosoftContext> : BaseTest
     [TestInitialize]
     public void TestInitialize()
     {
-        Factory = new CustomWebApplicationFactory<TStartup, TKrosoftContext>(ConfigureServices, ConfigureClaims, UseFakeAuth);
+        Factory = new CustomWebApplicationFactory<TStartup, TKrosoftContext>(ConfigureServices, ConfigureAppConfiguration, ConfigureClaims, UseFakeAuth);
     }
 }

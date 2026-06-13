@@ -30,7 +30,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MSTest.TestFramework" Version="4.2.3" />
-		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2026.5.18.7353" />
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2026.6.2.7477" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />

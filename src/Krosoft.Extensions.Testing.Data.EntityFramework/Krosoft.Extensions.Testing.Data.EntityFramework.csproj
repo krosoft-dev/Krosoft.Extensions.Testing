@@ -7,8 +7,8 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.10" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Data.Abstractions" Version="2026.8.6.8893" />
-		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2026.8.6.8893" />
+		<PackageReference Include="Krosoft.Extensions.Data.Abstractions" Version="2026.8.7.8919" />
+		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2026.8.7.8919" />
 		<PackageReference Include="LinqKit.Core" Version="1.2.11" />
 	</ItemGroup>
 	<ItemGroup>

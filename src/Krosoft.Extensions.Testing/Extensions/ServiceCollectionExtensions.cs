@@ -44,23 +44,29 @@ public static class ServiceCollectionExtensions
     }
 
     /// <summary>
-    /// Removes all registered <see cref="ServiceLifetime.Transient" /> registrations of <see cref="TService" /> and adds a new registration which uses the <see cref="Func{IServiceProvider, TService}" />.
+    /// Removes all registered registrations of <see cref="TService" />, whatever their <see cref="ServiceLifetime" />, and adds a new registration which uses the <see cref="Func{IServiceProvider, TService}" />.
     /// </summary>
     /// <typeparam name="TService">The type of service interface which needs to be placed.</typeparam>
     /// <param name="services"></param>
     /// <param name="implementationFactory">The implementation factory for the specified type.</param>
     public static IServiceCollection SwapTransient<TService>(this IServiceCollection services, Func<IServiceProvider, TService> implementationFactory)
     {
-        services.RemoveTransient<TService>();
+        services.RemoveServices<TService>();
         services.AddTransient(typeof(TService), sp => implementationFactory(sp) ?? throw new InvalidOperationException());
         return services;
     }
 
-    public static IServiceCollection SwapTransient<TService, TImplementation>(this IServiceCollection services)
+    /// <summary>
+    /// Removes all registered registrations of <see cref="TService" />, whatever their <see cref="ServiceLifetime" />, and adds a new <see cref="ServiceLifetime.Singleton" /> registration which uses <see cref="TImplementation" />.
+    /// </summary>
+    /// <typeparam name="TService">The type of service interface which needs to be placed.</typeparam>
+    /// <typeparam name="TImplementation">The implementation to use for the specified type.</typeparam>
+    /// <param name="services"></param>
+    public static IServiceCollection SwapService<TService, TImplementation>(this IServiceCollection services)
         where TImplementation : class, TService
         where TService : class
     {
-        services.RemoveTransient<TService>();
+        services.RemoveServices<TService>();
         services.AddSingleton<TService, TImplementation>();
         return services;
     }

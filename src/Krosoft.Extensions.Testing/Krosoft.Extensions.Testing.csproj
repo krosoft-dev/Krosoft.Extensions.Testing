@@ -11,7 +11,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.12" /> 
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Krosoft.Extensions.Core" Version="2026.9.12.10423" />
+		<PackageReference Include="Krosoft.Extensions.Core" Version="2026.10.9.11143" />
 		<PackageReference Include="Moq" Version="4.21.0" />
 		<PackageReference Include="NFluent" Version="3.1.0" />
 	</ItemGroup>

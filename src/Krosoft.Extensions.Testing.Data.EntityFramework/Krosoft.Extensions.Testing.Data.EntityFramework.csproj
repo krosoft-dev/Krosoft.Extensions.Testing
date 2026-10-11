@@ -9,7 +9,7 @@
 	<ItemGroup>
 		<PackageReference Include="Krosoft.Extensions.Data.Abstractions" Version="2026.10.10.11164" />
 		<PackageReference Include="Krosoft.Extensions.Data.EntityFramework" Version="2026.10.10.11164" />
-		<PackageReference Include="LinqKit.Core" Version="1.2.11" />
+		<PackageReference Include="LinqKit.Core" Version="1.3.0" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />

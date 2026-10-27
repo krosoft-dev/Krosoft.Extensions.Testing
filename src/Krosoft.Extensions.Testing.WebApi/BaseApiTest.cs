@@ -12,8 +12,29 @@ namespace Krosoft.Extensions.Testing.WebApi;
 public abstract class BaseApiTest<TStartup, TKrosoftContext> : BaseTest
     where TStartup : class
 {
+    private static readonly object SharedFactoryLock = new();
+    private static CustomWebApplicationFactory<TStartup, TKrosoftContext>? _sharedFactory;
+    private static Type? _sharedFactoryOwner;
+
     protected CustomWebApplicationFactory<TStartup, TKrosoftContext> Factory = null!;
     protected virtual bool UseFakeAuth => true;
+
+    /// <summary>
+    /// Partage la factory (et donc l'hôte web) entre les tests d'une même classe au lieu d'en démarrer une par test.
+    /// <see cref="ResetState" /> est appelé avant chaque test qui réutilise l'hôte.
+    /// ⚠️ <see cref="ConfigureServices" /> n'est joué qu'une fois par classe, sur la première instance : il ne doit pas
+    /// capturer d'état d'instance (mocks en champs d'instance notamment). Suppose des classes exécutées l'une après l'autre
+    /// (comportement par défaut de MSTest).
+    /// </summary>
+    protected virtual bool ShareFactory => false;
+
+    /// <summary>
+    /// Remet l'application dans son état initial (base de données, caches...) avant un test qui réutilise l'hôte partagé.
+    /// N'est pas appelé pour le premier test d'une classe : l'hôte vient d'être créé.
+    /// </summary>
+    protected virtual void ResetState(IServiceProvider services)
+    {
+    }
 
     protected virtual void ConfigureAppConfiguration(IConfigurationBuilder configurationBuilder)
     {
@@ -54,12 +75,53 @@ public abstract class BaseApiTest<TStartup, TKrosoftContext> : BaseTest
     [TestCleanup]
     public void TestCleanup()
     {
-        Factory.Dispose();
+        if (!ShareFactory)
+        {
+            Factory.Dispose();
+        }
     }
 
     [TestInitialize]
     public void TestInitialize()
     {
-        Factory = new CustomWebApplicationFactory<TStartup, TKrosoftContext>(ConfigureServices, ConfigureAppConfiguration, ConfigureClaims, UseFakeAuth);
+        if (!ShareFactory)
+        {
+            Factory = CreateFactory();
+            return;
+        }
+
+        lock (SharedFactoryLock)
+        {
+            if (_sharedFactory != null && _sharedFactoryOwner == GetType())
+            {
+                ResetState(_sharedFactory.Services);
+            }
+            else
+            {
+                // Nouvelle classe de tests : l'hôte de la classe précédente n'est plus utile.
+                _sharedFactory?.Dispose();
+                _sharedFactory = CreateFactory();
+                _sharedFactoryOwner = GetType();
+            }
+
+            Factory = _sharedFactory;
+        }
     }
+
+    /// <summary>
+    /// Libère l'hôte partagé encore actif. À appeler depuis l'<c>[AssemblyCleanup]</c> du projet de tests
+    /// (MSTest ne le découvre que sur une classe <c>[TestClass]</c> du projet, pas dans ce package).
+    /// </summary>
+    public static void DisposeSharedFactory()
+    {
+        lock (SharedFactoryLock)
+        {
+            _sharedFactory?.Dispose();
+            _sharedFactory = null;
+            _sharedFactoryOwner = null;
+        }
+    }
+
+    private CustomWebApplicationFactory<TStartup, TKrosoftContext> CreateFactory() =>
+        new(ConfigureServices, ConfigureAppConfiguration, ConfigureClaims, UseFakeAuth);
 }

@@ -150,7 +150,7 @@ public static class MockExtensions
     {
         mock.Verify(x => x.Log(level,
                                It.IsAny<EventId>(),
-                               It.Is<It.IsAnyType>((o, t) => o.ToString()!.Contains(message)),
+                               It.Is<It.IsAnyType>((o, t) => o != null && o.ToString()!.Contains(message)),
                                It.IsAny<Exception>(),
                                ((Func<It.IsAnyType, Exception, string>)It.IsAny<object>())!),
                     times);
@@ -191,7 +191,7 @@ public static class MockExtensions
     {
         fakeLogger.Verify(x => x.Log(logLevel,
                                      It.IsAny<EventId>(),
-                                     It.Is<It.IsAnyType>((o, t) => !string.IsNullOrEmpty(o.ToString()) && o.ToString()!.StartsWith(message)),
+                                     It.Is<It.IsAnyType>((o, t) => o != null && !string.IsNullOrEmpty(o.ToString()) && o.ToString()!.StartsWith(message)),
                                      It.IsAny<Exception>(),
                                      It.IsAny<Func<It.IsAnyType, Exception?, string>>()),
                           times);

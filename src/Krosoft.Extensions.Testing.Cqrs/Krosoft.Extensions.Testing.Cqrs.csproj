@@ -1,12 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<PackageTags>Krosoft Extension Testing Tests Unit cqrs mediatr</PackageTags>
 		<Description>Package pour faciliter la mise en place de tests avec CQRS.</Description>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
-		<PackageReference Include="MediatR" Version="12.5.0" />
-	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.5.0" />
 		<PackageReference Include="Krosoft.Extensions.Cqrs" Version="2026.11.16.13641" />
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />
 	</ItemGroup>

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<PackageTags>Krosoft Extension Testing Tests Unit NFluent nfluent moq asp net core WebApplicationFactory</PackageTags>
 		<Description>Package pour faciliter la mise en place de tests pour AspNetCore.</Description>
@@ -6,11 +6,15 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.15" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.15" />
-		<PackageReference Include="MediatR" Version="12.5.0" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net11.0'">
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="11.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="11.0.0" />
 	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.5.0" />
 		<PackageReference Include="MSTest.TestFramework" Version="4.5.3" />
-		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2026.11.16.13671" />
+		<PackageReference Include="Krosoft.Extensions.WebApi" Version="2026.11.16.13883" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />

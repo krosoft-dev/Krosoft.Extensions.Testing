@@ -5,7 +5,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="MediatR" Version="12.5.0" />
-		<PackageReference Include="Krosoft.Extensions.Cqrs" Version="2026.11.16.13823" />
+		<PackageReference Include="Krosoft.Extensions.Cqrs" Version="2026.11.16.13902" />
 		<ProjectReference Include="..\Krosoft.Extensions.Testing\Krosoft.Extensions.Testing.csproj" />
 	</ItemGroup>
 </Project>
